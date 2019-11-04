@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+</head>
+<body>
+
+</body>
+<script>
+/*
+  小娜里面有一个需要分割的字符串
+    是一个特定的分隔符，把每个数字分隔开的，我们可以利用这个特性来切割
+
+    用法
+      字符串.split(分隔符)
+      会把字符串分割开，成为多个分段，这么多的分段，组合起来给你，就是一个数组
+      切割开以后，数组里面的每个部分，仍然是字符串
+*/
+var number = '1,2,3,4';
+var result = number.split(',');
+console.log(result);
+
+/* 把里面的数字相加 */
+var sum = 0;
+for(var i = 0; i < result.length; i++){
+  sum += parseFloat(result[i]);
+}
+console.log(sum);
+</script>
+</html>
