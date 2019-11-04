@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+</head>
+<body>
+
+</body>
+<script>
+/*
+  js里面也帮我们提供了一个获取随机数的方法
+
+    用法：
+      Math.random()
+*/
+// console.log(Math.random());
+
+
+/* 让随机的小数放大一定的倍数 */
+// console.log(Math.random() * 10);
+
+
+/* js里面取整
+  向下取整
+    沿着数轴，向左边，找到一个离我最近的整数
+
+    Math.floor(小数)
+*/
+// console.log(Math.floor(1.5));
+// console.log(Math.floor(-1.5));
+
+
+/* 随机整数 */
+// 1 先得到一个随机的小数
+var r = Math.random();
+// 2 放大一定的倍数
+r *= 10;
+// 3 取整
+r = Math.floor(r);
+console.log(r); // 放大10倍，得到的随机整数是0~9 ， 如果要得到0~2，只需要放大3倍就可以了
+
+/* 有一个数组，数组是有长度的 */
+var arr = ['张飞','关羽','刘备'];
+// 索引只能是： 0 1 2
+console.log(arr[r]);
+// 如果要保证，随机的索引刚好在最大值和最小值之间，只需要放大  数组.length 倍就可以了
+</script>
+</html>
